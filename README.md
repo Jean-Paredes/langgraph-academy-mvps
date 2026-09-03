@@ -12,6 +12,5 @@ Repositorio con los entregables y MVPs reproducibles para los Módulos 0 al 6 de
 
 1. **Clonar el repositorio y entrar a la carpeta:**
    ```bash
-   git clone https://github.com/Jean-Paredes/langgraph-academy-mvps
-   cd langgraph-mvps
-
+   git clone [https://github.com/Jean-Paredes/langgraph-academy-mvps.git](https://github.com/Jean-Paredes/langgraph-academy-mvps.git)
+   cd langgraph-academy-mvps
