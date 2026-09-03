@@ -74,9 +74,9 @@ graph = builder.compile()
 # Pruebas de ejecución
 if __name__ == "__main__":
     print("--- Prueba 1: Ruta ReAct con Tool ---")
-    res1 = graph.invoke({"messages": [HumanMessage("¿Cuál es el clima en Bogotá?")]})
+    res1 = graph.invoke({"messages": [HumanMessage("¿Cuál es el clima en Nariño?")]})
     print("Resultado:", res1["messages"][-1].content)
 
     print("\n--- Prueba 2: Ruta Chat Simple ---")
-    res2 = graph.invoke({"messages": [HumanMessage("Dime un chiste corto de programadores.")]})
+    res2 = graph.invoke({"messages": [HumanMessage("Dime un chiste corto de Ingeniero de Datos.")]})
     print("Resultado:", res2["messages"][-1].content)
