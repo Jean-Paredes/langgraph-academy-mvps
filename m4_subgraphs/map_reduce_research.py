@@ -57,7 +57,7 @@ main_graph = main_builder.compile()
 
 if __name__ == "__main__":
     print("--- Ejecutando Map-Reduce Research Assistant ---")
-    input_data = {"topics": ["Inteligencia Artificial", "Computación Cuántica", "Biotecnología"]}
+    input_data = {"topics": ["Agentes de IA", "Cencia de Datos", "Gobierno de Datos"]}
     res = main_graph.invoke(input_data)
     
     print("\nResultados del Map (Análisis individuales):")
