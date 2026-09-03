@@ -1,0 +1,12 @@
+[project]
+name = "langgraph-mvps"
+version = "0.1.0"
+description = "MVPs de LangGraph"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain-google-genai>=4.4.0",
+    "langgraph>=1.2.11",
+    "langgraph-cli[inmem]>=0.4.31",
+    "python-dotenv>=1.2.3",
+]

@@ -1,0 +1,8 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "hello_world": "./m0_studio/graph.py:graph",
+    "email_agent": "./m6_deployment/email_agent.py:app"
+  },
+  "env": ".env"
+}
