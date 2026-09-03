@@ -50,7 +50,7 @@ main_builder.add_node("map_node", map_analyses_node)
 main_builder.add_node("reduce_node", reduce_report_node)
 
 main_builder.add_edge(START, "map_node")
-main_builder.add_edge("map_node", reduce_node)
+main_builder.add_edge("map_node", "reduce_node")
 main_builder.add_edge("reduce_node", END)
 
 main_graph = main_builder.compile()

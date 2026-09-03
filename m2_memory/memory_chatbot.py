@@ -40,17 +40,17 @@ graph = builder.compile(checkpointer=checkpointer)
 
 # Pruebas de Persistencia por Thread ID
 if __name__ == "__main__":
-    config_thread_1 = {"configurable": {"thread_id": "usuario_juan"}}
+    config_thread_1 = {"configurable": {"thread_id": "usuario_jean"}}
     config_thread_2 = {"configurable": {"thread_id": "usuario_maria"}}
 
-    print("--- Sesión Juan: Mensaje 1 ---")
-    r1 = graph.invoke({"messages": [HumanMessage("Hola, me llamo Juan y vivo en Colombia.")]}, config=config_thread_1)
+    print("--- Sesión Jean: Mensaje 1 ---")
+    r1 = graph.invoke({"messages": [HumanMessage("Hola, me llamo Jean y vivo en Colombia.")]}, config=config_thread_1)
     print("Bot:", r1["messages"][-1].content)
 
     print("\n--- Sesión María: Mensaje 1 (Hilo Independiente) ---")
     r2 = graph.invoke({"messages": [HumanMessage("Hola, cuál es mi nombre?")]}, config=config_thread_2)
     print("Bot:", r2["messages"][-1].content)
 
-    print("\n--- Sesión Juan: Mensaje 2 (Demostrando Persistencia de Memoria) ---")
+    print("\n--- Sesión Jean: Mensaje 2 (Demostrando Persistencia de Memoria) ---")
     r3 = graph.invoke({"messages": [HumanMessage("¿Recuerdas cómo me llamo y dónde vivo?")]}, config=config_thread_1)
     print("Bot:", r3["messages"][-1].content)

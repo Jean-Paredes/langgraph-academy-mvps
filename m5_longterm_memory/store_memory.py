@@ -8,6 +8,7 @@ from langgraph.checkpoint.memory import InMemorySaver
 from langgraph.store.memory import InMemoryStore
 from langgraph.graph import StateGraph, START, END
 from langgraph.graph.message import add_messages
+from langgraph.runtime import get_store  # Importante para acceder al store
 
 warnings.filterwarnings("ignore", category=UserWarning)
 load_dotenv()
@@ -18,7 +19,9 @@ class LongTermState(TypedDict):
 
 llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
 
-def memory_node(state: LongTermState, store: InMemoryStore):
+def memory_node(state: LongTermState):
+    # Recuperamos el store del contexto de ejecución de LangGraph
+    store = get_store()
     user_id = state["user_id"]
     namespace = ("users", user_id, "memories")
     
