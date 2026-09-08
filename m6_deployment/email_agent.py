@@ -85,7 +85,7 @@ def human_review(state: EmailAgentState) -> Command[Literal["send_reply", END]]:
 
 def send_reply(state: EmailAgentState) -> EmailAgentState:
     """Envía la respuesta final."""
-    print(f"📧 Respuesta enviada: {state.get('draft_response')[:50]}...")
+    print(f"Respuesta enviada: {state.get('draft_response')[:50]}...")
     return {}
 
 # Construcción del Grafo

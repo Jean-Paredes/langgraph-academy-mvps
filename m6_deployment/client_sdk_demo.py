@@ -29,7 +29,7 @@ def run_deployment_demo():
     # 2. Manejo de Pausa (Interrupt / Human-in-the-loop)
     if "__interrupt__" in result:
         details = result["__interrupt__"][0].value
-        print(f"\n⚠️  GRAFO PAUSADO POR INTERRUPT:")
+        print(f"\nGRAFO PAUSADO POR INTERRUPT:")
         print(f"    - ID Correo: {details['email_id']}")
         print(f"    - Acción requerida: {details['action']}")
         print(f"    - Borrador generado: {details['draft'][:80]}...")
@@ -40,7 +40,7 @@ def run_deployment_demo():
             Command(resume={"approved": True}),
             config=config
         )
-        print("✅ Estado de cierre:", "Procesado con éxito.")
+        print("Estado de cierre:", "Procesado con éxito.")
 
     # 3. Demostración de Estrategia Double-Texting
     print("\n--------------------------------------------------")

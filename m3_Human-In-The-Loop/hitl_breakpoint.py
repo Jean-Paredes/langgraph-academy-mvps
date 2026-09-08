@@ -57,7 +57,7 @@ if __name__ == "__main__":
     
     if "__interrupt__" in res1:
         interrupt_info = res1["__interrupt__"][0].value
-        print(f"⚠️ PAUSA DETECTADA: {interrupt_info['question']}")
+        print(f"PAUSA DETECTADA: {interrupt_info['question']}")
         
         print("\n--- 2. Reanudando ejecución (Aprobación del humano) ---")
         res2 = graph.invoke(Command(resume="approve"), config=config)
